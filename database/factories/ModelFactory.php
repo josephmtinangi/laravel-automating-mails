@@ -30,3 +30,17 @@ $factory->define(App\Models\NewsletterSubscriber::class, function (Faker\Generat
         'verified' => true,
     ];
 });
+
+$factory->define(App\Models\Newsletter::class, function (Faker\Generator $faker) {
+    $title = $faker->sentence;
+    return [
+        'title' => $title,
+        'slug' => str_slug($title, '-'),
+        'content_html' => $faker->paragraph,
+        'published' => true,
+        'published_at' => \Carbon\Carbon::now()->addDay(),
+        'user_id' => function () {
+            return factory('App\User')->create()->id;
+        },
+    ];
+});
