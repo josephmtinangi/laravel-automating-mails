@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\NewsletterPublished;
 use App\Models\Newsletter;
 use Illuminate\Http\Request;
 
@@ -98,5 +99,14 @@ class NewsletterController extends Controller
     public function destroy(Newsletter $newsletter)
     {
         //
+    }
+
+    public function send($slug, $id)
+    {
+        $newsletter = Newsletter::whereSlug($slug)->whereId($id)->firstOrFail();
+
+        event(new NewsletterPublished($newsletter));
+
+        return back();
     }
 }

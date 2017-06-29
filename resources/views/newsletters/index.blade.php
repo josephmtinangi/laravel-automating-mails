@@ -18,11 +18,11 @@
                     <div class="table-responsive">
                         <table class="table table-hover">
                             <thead>
-                                <tr>
-                                    <th>SN</th>
-                                    <th>Title</th>
-                                    <th>Composed</th>
-                                </tr>
+                            <tr>
+                                <th>SN</th>
+                                <th>Title</th>
+                                <th>Composed</th>
+                            </tr>
                             </thead>
                             <tbody>
                             @php $i = 1 @endphp

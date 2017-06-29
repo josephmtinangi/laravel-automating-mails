@@ -9,7 +9,7 @@
 </head>
 <body>
 
-{{ $newsletter->content_html }}
+{!! $newsletter->content_html !!}
 
 Regards, <br>
 {{ Config('app.name') }}
