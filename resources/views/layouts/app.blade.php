@@ -36,25 +36,6 @@
 
     @yield('content')
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <h3 class="text-center">Subscribe for Weekly Newsletters</h3>
-
-                @if($errors->count())
-                    @foreach($errors->all() as $error)
-                        <div class="alert alert-success">
-                            {{ $error }}
-                        </div>
-                    @endforeach
-                @endif
-                <div class="col-sm-4 col-sm-offset-4">
-                    @include('partials.forms.newsletter')
-                </div>
-            </div>
-        </div>
-    </footer>
-
 </div>
 
 <!-- Scripts -->

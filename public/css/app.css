@@ -8350,14 +8350,19 @@ button.close {
   }
 }
 
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .bg-primary {
   background-color: #D94350;
   color: #F2EB8C;
 }
 
 .bg-secondary {
-  background-color: #A65D33;
-  color: #F2F2F2;
+  background-color: #60A2E3;
+  color: #FFF;
 }
 
 .jumbotron-newsletter {
@@ -8368,10 +8373,66 @@ button.close {
   margin-bottom: 30px;
 }
 
-footer {
-  margin-top: 30px;
+.header {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #0B172A;
+  color: #F2F2F2;
+}
+
+.header h1 {
+  line-height: 1.6;
+}
+
+.ctas {
+  color: #FFF;
+}
+
+.ctas .left {
+  padding-top: 100px;
+  padding-left: 20px;
+  width: 100%;
+  height: 300px;
+  background-color: #60A2E3;
+}
+
+.ctas .right {
   padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: #1e1e1e;
+  padding-left: 10px;
+  width: 100%;
+  height: 300px;
+  background-color: #66ADEC;
+}
+
+.explainer {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+.explainer .top {
+  margin-bottom: 30px;
+}
+
+.explainer h3 {
+  color: #222;
+}
+
+.explainer .icon {
+  font-size: 100px;
+  color: #0B172A;
+}
+
+.details {
+  padding-top: 30px;
+  color: #FFF;
+  background-color: #66A1E7;
+}
+
+footer {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 150px;
+  background-color: #66ADEC;
 }
 

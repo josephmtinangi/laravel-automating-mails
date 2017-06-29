@@ -32,6 +32,6 @@ class SendNewsletterToSubscribers
         $newsletter = $event->newsletter;
         $newsletterSubscribers = NewsletterSubscriber::get();
         Mail::to($newsletterSubscribers)
-            ->send(new Newsletter($newsletter));
+            ->queue(new Newsletter($newsletter));
     }
 }

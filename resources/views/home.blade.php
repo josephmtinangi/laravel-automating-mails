@@ -5,6 +5,14 @@
     <div class="jumbotron bg-primary">
         <div class="container">
             <h1>{{ Auth::user()->name }}</h1>
+            <p>
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                    {{ csrf_field() }}
+
+<button type="submit" class="btn btn-primary">Logout</button>
+
+                                </form>
+            </p>
         </div>
     </div>
 
