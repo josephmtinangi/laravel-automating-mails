@@ -19,6 +19,17 @@
         .jumbotron {
             background-color: #2e2e2e;
         }
+        .features {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .feature {
+            background-color: #1d1d1d;
+            width: 100%;
+            height: 400px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
         footer {
             padding-top: 50px;
             padding-bottom: 50px;
