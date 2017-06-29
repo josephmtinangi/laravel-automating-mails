@@ -4,7 +4,7 @@
 </div>
 <div class="form-group">
     <label for="content_html">Content</label>
-    <textarea name="content_html" id="content_html" rows="10" class="form-control"></textarea>
+    <textarea name="content_html" id="content_html" class="form-control"></textarea>
 </div>
 <div class="form-group">
     <label for="published_at">Publish On</label>

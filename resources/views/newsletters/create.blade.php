@@ -13,7 +13,7 @@
             <div class="col-sm-2">
                 @include('partials.sidebar')
             </div>
-            <div class="col-sm-10">
+            <div class="col-sm-10">            
 
                 <form method="POST" action="{{ route('newsletters.store') }}">
                     {{ csrf_field() }}

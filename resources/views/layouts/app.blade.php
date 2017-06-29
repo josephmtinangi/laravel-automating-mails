@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="/vendor/trumbowyg/dist/ui/trumbowyg.min.css" rel="stylesheet">
 </head>
 <body>
 <div id="app">
@@ -54,5 +55,11 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="/vendor/trumbowyg/dist/trumbowyg.min.js"></script>
+<script>
+    $('textarea').trumbowyg({
+        autogrow: true
+    });
+</script>
 </body>
 </html>
