@@ -4,7 +4,7 @@
 
     <div class="jumbotron bg-primary">
         <div class="container">
-            <h1>{{ $newsletter->title }}</h1>
+            <h1>Compose new newsletter</h1>
         </div>
     </div>
 
@@ -15,7 +15,13 @@
             </div>
             <div class="col-sm-10">
 
-                {!! $newsletter->content_html !!}
+                <form method="POST" action="{{ route('newsletters.store') }}">
+                    {{ csrf_field() }}
+
+
+                    @include('newsletters._form', ['btnText' => 'Finish'])
+
+                </form>
 
             </div>
         </div>

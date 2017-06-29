@@ -25,7 +25,7 @@ class NewsletterController extends Controller
      */
     public function create()
     {
-        //
+        return view('newsletters.create');
     }
 
     /**
@@ -36,7 +36,20 @@ class NewsletterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'content_html' => 'required',
+        ]);
+
+        $newsletter = new Newsletter();
+        $newsletter->title = $request->input('title');
+        $newsletter->slug = str_slug($request->input('title'), '-');
+        $newsletter->content_html = $request->input('content_html');
+        $newsletter->published_at = $request->input('published_at');
+
+        auth()->user()->newsletters()->save($newsletter);
+
+        return redirect()->route('newsletters.index');
     }
 
     /**
