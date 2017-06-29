@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\NewsletterSubscriber;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -11,14 +12,16 @@ class NewsletterSubscriptionConfirmation extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $newsletterSubscriber;
+
     /**
      * Create a new message instance.
      *
-     * @return void
+     * @param NewsletterSubscriber $newsletterSubscriber
      */
-    public function __construct()
+    public function __construct(NewsletterSubscriber $newsletterSubscriber)
     {
-        //
+        $this->newsletterSubscriber = $newsletterSubscriber;
     }
 
     /**

@@ -60,7 +60,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li><a href="{{ route('newsletter-subscribers.index') }}">Subscribers</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -114,7 +114,7 @@
                         @endforeach
                     @endif
                     <div class="col-sm-4 col-sm-offset-4">
-                        <form method="POST" action="{{ route('newsletter-subscribers') }}">
+                        <form method="POST" action="{{ route('newsletter-subscribers.store') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group">

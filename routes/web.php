@@ -19,4 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('newsletter-subscribers', 'NewsletterSubscriberController@store')->name('newsletter-subscribers');
+Route::get('newsletter-subscribers', 'NewsletterSubscriberController@index')->name('newsletter-subscribers.index');
+Route::post('newsletter-subscribers', 'NewsletterSubscriberController@store')->name('newsletter-subscribers.store');
+Route::get('newsletter-subscribers/confirm/{token}', 'NewsletterSubscriberController@confirm')->name('newsletter-subscribers.confirm');
