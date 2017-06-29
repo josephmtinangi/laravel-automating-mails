@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} - @yield('title')</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -49,15 +49,7 @@
                     @endforeach
                 @endif
                 <div class="col-sm-4 col-sm-offset-4">
-                    <form method="POST" action="{{ route('newsletter-subscribers.store') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="Email Address">
-                        </div>
-
-                        <button type="submit" class="btn btn-info btn-block">Subscribe</button>
-                    </form>
+                    @include('partials.forms.newsletter')
                 </div>
             </div>
         </div>

@@ -29,3 +29,5 @@ Route::post('newsletters', 'NewsletterController@store')->name('newsletters.stor
 Route::get('newsletters/{slug}/{id}', 'NewsletterController@show')->name('newsletters.show');
 Route::post('newsletters/{slug}/{id}/send', 'NewsletterController@send')->name('newsletters.send');
 
+Route::get('newsletter', 'PageController@newsletter')->name('newsletter');
+
