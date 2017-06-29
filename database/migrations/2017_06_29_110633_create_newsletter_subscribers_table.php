@@ -15,6 +15,7 @@ class CreateNewsletterSubscribersTable extends Migration
     {
         Schema::create('newsletter_subscribers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name')->nullable();
             $table->string('email')->unique();
             $table->boolean('verified')->default(false);
             $table->string('token')->nullable();

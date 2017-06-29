@@ -31,6 +31,7 @@ class Newsletter extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.newsletters.show');
+        return $this->subject($this->newsletter->title)
+            ->view('emails.newsletters.show');
     }
 }
