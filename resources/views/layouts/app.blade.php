@@ -12,6 +12,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        body {
+            background-color: #3d3d3d;
+        }
+        .jumbotron {
+            background-color: #2e2e2e;
+        }
+        footer {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: #1e1e1e;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -72,6 +85,26 @@
         </nav>
 
         @yield('content')
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <h3 class="text-center">Subscribe for Weekly Newsletters</h3>
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <form action="">
+                            {{ csrf_field() }}
+
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Email Address">
+                            </div>
+
+                            <button type="submit" class="btn btn-info btn-block">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
     </div>
 
     <!-- Scripts -->
