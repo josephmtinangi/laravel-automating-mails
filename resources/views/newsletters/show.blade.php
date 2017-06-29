@@ -4,7 +4,7 @@
 
     <div class="jumbotron bg-primary">
         <div class="container">
-            <h1>{{ Auth::user()->name }}</h1>
+            <h1>{{ $newsletter->title }}</h1>
         </div>
     </div>
 
@@ -14,6 +14,8 @@
                 @include('partials.sidebar')
             </div>
             <div class="col-sm-10">
+
+                {{ $newsletter->content_html }}
 
             </div>
         </div>

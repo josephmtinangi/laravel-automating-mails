@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('newsletter-subscribers', 'NewsletterSubscriberController@index')->name('newsletter-subscribers.index');
 Route::post('newsletter-subscribers', 'NewsletterSubscriberController@store')->name('newsletter-subscribers.store');
 Route::get('newsletter-subscribers/confirm/{token}', 'NewsletterSubscriberController@confirm')->name('newsletter-subscribers.confirm');
+
+Route::get('newsletters', 'NewsletterController@index')->name('newsletters.index');
+Route::get('newsletters/{slug}/{id}', 'NewsletterController@show')->name('newsletters.show');
+
