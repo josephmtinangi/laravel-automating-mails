@@ -13,6 +13,18 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="/vendor/trumbowyg/dist/ui/trumbowyg.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
+    <style>
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Dosis', sans-serif;
+            font-weight: 900;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: medium;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
